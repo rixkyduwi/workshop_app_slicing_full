@@ -29,6 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
     <Button
+        android:id="@+id/back_to_awal"
+        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_primary"

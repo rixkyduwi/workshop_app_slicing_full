@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Workshopexample"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name=".SplashScreen"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             android:exported="true"
             android:label="@string/title_activity_main" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".DetailActivity"
             android:exported="true" />
         <activity
             android:name=".OrderActivity"

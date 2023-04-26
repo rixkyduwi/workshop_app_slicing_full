@@ -78,6 +78,8 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/populer1"
+                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
@@ -94,6 +96,7 @@
                     android:paddingBottom="13dp">
 
                     <androidx.cardview.widget.CardView
+                        android:clickable="true"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_marginBottom="4dp"
@@ -130,6 +133,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/populer2"
+                android:clickable="true"
                 app:cardCornerRadius="12dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="2dp">
@@ -181,6 +186,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
+                android:id="@+id/populer3"
+                android:clickable="true"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="2dp">
 
@@ -231,6 +238,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
+                android:id="@+id/populer4"
+                android:clickable="true"
                 android:layout_marginBottom="2dp">
 
 
@@ -618,6 +627,7 @@
         android:gravity="top">
         <LinearLayout
             android:id="@+id/daftarwisata1"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -741,6 +751,7 @@
         <LinearLayout
             android:id="@+id/daftarwisata2"
             android:layout_below="@+id/daftarwisata1"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
