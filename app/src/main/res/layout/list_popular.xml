@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/list_history"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackgroundBorderless" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/tv_foto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="history"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#5E5E5E"/>
+
+    </LinearLayout>
+
+</layout>
