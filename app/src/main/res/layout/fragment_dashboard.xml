@@ -6,11 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment"
-    android:paddingStart="20dp"
-    android:paddingEnd="20dp"
     android:paddingBottom="?attr/actionBarSize"
+    app:layout_scrollEffect="compress"
     android:background="@color/bg_bg2">
-    <EditText
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,6 +42,8 @@
         android:paddingTop="12dp"
         android:paddingEnd="17dp"
         android:paddingBottom="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +54,8 @@
         android:id="@+id/judul1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="18dp"
         android:orientation="horizontal"
@@ -66,7 +86,7 @@
         android:id="@+id/konten1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,12 +99,14 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/populer1"
-                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="2dp">
+                android:layout_marginBottom="13dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -96,10 +118,10 @@
                     android:paddingBottom="13dp">
 
                     <androidx.cardview.widget.CardView
-                        android:clickable="true"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_marginBottom="4dp"
+                        android:clickable="true"
                         app:cardCornerRadius="12dp">
 
                         <ImageView
@@ -130,14 +152,17 @@
                         android:textSize="12dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/populer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/populer2"
                 android:clickable="true"
-                app:cardCornerRadius="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="2dp">
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -182,110 +207,117 @@
                         android:textSize="12dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
                 android:id="@+id/populer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:clickable="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="2dp">
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="12dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="7dp"
-                android:paddingTop="7dp"
-                android:paddingEnd="7dp"
-                android:paddingBottom="13dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="4dp"
-                    app:cardCornerRadius="12dp">
-
-                    <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/wisata1"
-
-                        />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Rita Park"
-                    android:textColor="@color/font_high_emphasis"
-                    android:textSize="16dp" />
+                    android:orientation="vertical"
+                    android:paddingStart="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="13dp">
 
-                <TextView
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="12dp">
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="pesurungan, tegal barat"
-                    android:textColor="@color/font_high_emphasis"
-                    android:textSize="12dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/wisata1"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Rita Park"
+                        android:textColor="@color/font_high_emphasis"
+                        android:textSize="16dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="pesurungan, tegal barat"
+                        android:textColor="@color/font_high_emphasis"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
                 android:id="@+id/populer4"
-                android:clickable="true"
-                android:layout_marginBottom="2dp">
-
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="7dp"
-                android:paddingTop="7dp"
-                android:paddingEnd="7dp"
-                android:paddingBottom="13dp">
+                android:clickable="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="12dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="80dp"
-                    android:layout_marginBottom="4dp"
-                    app:cardCornerRadius="12dp">
 
-                    <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bahari_2"
-
-                        />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Rita Park"
-                    android:textColor="@color/font_high_emphasis"
-                    android:textSize="16dp" />
+                    android:orientation="vertical"
+                    android:paddingStart="7dp"
+                    android:paddingTop="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="13dp">
 
-                <TextView
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="12dp">
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="pesurungan, tegal barat"
-                    android:textColor="@color/font_high_emphasis"
-                    android:textSize="12dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bahari_2"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Rita Park"
+                        android:textColor="@color/font_high_emphasis"
+                        android:textSize="16dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="pesurungan, tegal barat"
+                        android:textColor="@color/font_high_emphasis"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -293,6 +325,8 @@
         android:id="@+id/judul2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
@@ -318,10 +352,10 @@
             />
 
     </LinearLayout>
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/konten2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="85dp"
         app:layout_constraintTop_toBottomOf="@+id/judul2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -336,8 +370,11 @@
                 android:id="@+id/terbaru1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                app:cardCornerRadius="12dp">
+                app:cardCornerRadius="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -418,7 +455,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/terbaru1"
-                android:layout_marginBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp"
                 app:cardCornerRadius="12dp">
 
                 <LinearLayout
@@ -498,94 +538,104 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/terbaru3"
-                android:layout_below="@+id/terbaru2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
+                android:layout_below="@+id/terbaru2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
                 app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="56dp"
                         android:layout_height="54dp"
-                        android:backgroundTint="@color/bg_bg2"
-                        app:cardCornerRadius="7dp"
                         android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/bg_bg2"
                         android:outlineAmbientShadowColor="@color/tertiary"
-                        >
+                        app:cardCornerRadius="7dp">
+
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/muarareja"
-                            />
+                            android:src="@drawable/muarareja" />
                     </androidx.cardview.widget.CardView>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
                             android:text="Pantai Muarareja"
-                            android:textSize="16dp"
                             android:textColor="@color/font_high_emphasis"
-                            android:fontFamily="@font/poppins_semibold"/>
+                            android:textSize="16dp" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Muarareja, Tegal Barat"
                             android:fontFamily="@font/roboto_regular"
-                            android:textSize="12dp"
-                            android:textColor="@color/font_high_emphasis"/>
+                            android:text="Muarareja, Tegal Barat"
+                            android:textColor="@color/font_high_emphasis"
+                            android:textSize="12dp" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:layout_marginTop="4dp"
                         android:layout_marginEnd="12dp"
-                        android:textAlignment="textEnd"
                         android:gravity="right"
-                        >
+                        android:orientation="horizontal"
+                        android:textAlignment="textEnd">
+
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAlignment="textEnd"
                             android:gravity="right"
                             android:src="@drawable/ic_star"
-                            />
+                            android:textAlignment="textEnd" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAlignment="textEnd"
                             android:gravity="right"
                             android:text="4.6"
-                            />
+                            android:textAlignment="textEnd" />
 
                     </LinearLayout>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
     <LinearLayout
         android:id="@+id/judul3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="18dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -611,10 +661,10 @@
             />
 
     </LinearLayout>
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/konten3"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="160dp"
         app:layout_constraintTop_toBottomOf="@+id/judul3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -625,24 +675,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="top">
+
         <LinearLayout
             android:id="@+id/daftarwisata1"
-            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:clickable="true"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".50" >
+                android:layout_weight=".50">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -692,14 +745,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".50" >
+                android:layout_weight=".50">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="12dp"
                     android:layout_marginStart="4dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -765,8 +820,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -823,7 +880,9 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
                     android:layout_marginStart="4dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -873,6 +932,9 @@
         </LinearLayout>
 
     </RelativeLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.rizky.workshopexample.MainActivity
 import com.rizky.workshopexample.databinding.FragmentHomeBinding
+import android.content.Intent
+import androidx.core.app.ActivityCompat
+import com.rizky.workshopexample.ui.insightchatgpt
 
 class HomeFragment : Fragment() {
 
@@ -28,9 +32,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+
+        binding.udin.setOnClickListener {
+            val intent = Intent(context, insightchatgpt::class.java)
+            startActivity(intent)
         }
         return root
     }
